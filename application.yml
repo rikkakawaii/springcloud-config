@@ -1,17 +1,18 @@
-spring
-    profiles：
-        active：dev 
+
+spring:
+  profiles:
+    active: dev
 ---
-server：
-    port： 8011
-spring：  
-    profiles：dev
-    application:
-        name: git-repository-file-dev
+server:
+  port: 8011
+spring:
+  profiles: dev
+  application:
+    name: git-repository-file-dev
 ---
-server：
-    port： 8022
-spring：  
-    profiles：test
-    application:
-        name: git-repository-file-test
+server:
+  port: 8022
+spring:
+  profiles: test
+  application:
+    name: git-repository-file-test
