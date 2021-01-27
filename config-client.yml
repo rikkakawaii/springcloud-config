@@ -4,15 +4,15 @@ spring:
     active: dev
 ---
 server:
-  port: 8011
+  port: 3355
 spring:
   profiles: dev
   application:
-    name: git-repository-file-dev
+    name: cloud-config-client-dev
 ---
 server:
-  port: 8022
+  port: 3366
 spring:
   profiles: test
   application:
-    name: git-repository-file-test
+    name: cloud-config-client-test
