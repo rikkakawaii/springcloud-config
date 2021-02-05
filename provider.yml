@@ -1,0 +1,36 @@
+spring:
+  profiles:
+    active: 7001
+---
+server:
+  port: 8001
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/cloud1?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: Rikka0612
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+  application:
+    name: provider
+  redis:
+    host: 192.168.0.102
+    port: 6379
+    jedis:
+      pool:
+        max-active: 100
+        max-idle: 10
+        max-wait: 100000
+mybatis:
+  type-aliases-package: com.wby.entity
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
